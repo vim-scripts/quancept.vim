@@ -1,4 +1,6 @@
 "syntax clear
+"version 0rc1
+
 "syntax case ignore
 "syn keyword qqcKeywords		ask resp for next
 "syn region qqcString		start="'" end="'"
@@ -6,7 +8,7 @@
 "hi link qqcKeywords	Keyword
 " Vim syntax file
 " Language:	Quancept
-" Maintainer:	Ferenc Tamasi <ferenc.tamasi@hu.millwardbrown.com>
+" Maintainer:	Ferenc Tamasi <tf551@hszk.bme.hu>
 " Last Change:	Mon Jun 30 18:06 CET 2003
 
 " Based on the BASIC syntax file of Allan Kelly
