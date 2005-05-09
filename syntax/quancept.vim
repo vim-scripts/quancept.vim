@@ -97,8 +97,12 @@ syn match   qqcTODO		"\<TODO\>\|\<FIX\>" contained
 syntax case ignore
 syn match   qqcQuestionPart2	"\(q\|s\)[0-9]\+"
 "syn match   qqcQuestionPart	"\(q\|s\)[0-9]\+\w\{0,1}\>"
-syn match   qqcQuestionLabel2	"^\(q\|s\)[0-9]\+\>"
-syn match   qqcQuestionLabel	"^\(q\|s\)[0-9]\+\w\{0,1}\>"
+"syn match   qqcQuestionLabel2	"^\(q\|s\)[0-9]\+\>"
+"syn match   qqcQuestionLabel	"^\(q\|s\)[0-9]\+\w\{0,1}\>"
+" new label handling from Daniel Harper <daniel@harper.net.nz>
+" comment the next line and uncomment the previous two and 142th
+" to restore the old behaviour
+syn match   qqcQuestionLabel	"^\<\w\+\>"
 syn match   qqcInstrVar		"\[+.*+\]" contained
 syn match   qqcSpecialResp	"\^o'\|\^s'"me=e-1 contained
 syn match   qqcComment		"comment.*$" contains=qqcTODO
@@ -135,7 +139,7 @@ syn match   qqcOperator		"-\|=\|[:<>+\*^/\\]\|\.not\.\|\.or\.\|\.and\.\|\.xor\."
   hi link qqcNewLine		Normal
   hi link qqcQuestionPart2	WarningMsg
 "  hi link qqcQuestionPart	WarningMsg
-  hi link qqcQuestionLabel2	Error
+"  hi link qqcQuestionLabel2	Error
   hi link qqcQuestionLabel	Error
   hi link qqcAutoSubscr		Number
   hi link qqcErrResp		Error
